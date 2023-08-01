@@ -1,6 +1,7 @@
 from utilidades.verificar import verifica_opcao
 from banco_dados.acesso_banco import BancoPython
 from decimal import Decimal
+import pymysql 
 
 def opcoes(continuar):
     while continuar:
@@ -62,5 +63,7 @@ def opcoes(continuar):
             
         except ValueError as erro:
             print("\nErro! Valor informado fora dos parâmetros.")
+        except pymysql.Error as erro:
+            print("\nErro ao acessar o banco de dados:", str(erro))
         except Exception as erro:
-            print("\nErro inesperado!", str(erro))
+            print("\nErro inesperado:", str(erro))
