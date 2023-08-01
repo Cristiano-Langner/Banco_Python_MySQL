@@ -66,10 +66,13 @@ class BancoPython:
             print("Valor de depósito inválido.")
 
     def sacar(self, valor_saque, id, saldo):
-        if valor_saque <= saldo:
+        if valor_saque <= saldo and valor_saque > 0:
             saldo -= valor_saque
             self.cursor.execute("UPDATE cadastro_cliente SET saldo = %s WHERE id = %s", (saldo, id))
             self.conn.commit()
             print(f"Saque de R${valor_saque:.2f} realizado. Saldo atual: R${saldo:.2f}")
         else:
-            print("Saldo insuficiente.")
+            if valor_saque <= 0:
+                print("Valor do saque inválido.")
+            else:
+                print("Saldo insuficiente.")
