@@ -1,10 +1,8 @@
-Projeto Banco Python
-====================
+# Projeto Banco Python
 
 Este projeto é uma implementação simples de um sistema de banco em Python, utilizando um banco de dados MySQL para armazenar as informações dos clientes e seus saldos.
 
-Funcionalidades:
-----------------
+# Funcionalidades
 
 1. Depositar: Permite ao cliente fazer um depósito em sua conta.
 2. Sacar: Permite ao cliente fazer um saque de sua conta, caso o saldo seja suficiente.
@@ -14,15 +12,13 @@ Funcionalidades:
 6. Encerrar uma conta: Permite encerrar uma conta pelo CPF informado.
 7. Sair: Encerra o sistema.
 
-Requisitos:
------------
+# Requisitos
 
 - Python 3.x
 - MySQL Server
 - Biblioteca PyMySQL (para interação com o banco de dados)
 
-Instruções de Uso:
-------------------
+# Instruções de Uso:
 
 1. Clone o repositório do projeto.
 2. Certifique-se de ter o Python e o MySQL instalados em sua máquina.
